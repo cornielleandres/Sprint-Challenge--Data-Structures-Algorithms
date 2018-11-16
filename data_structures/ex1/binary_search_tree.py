@@ -4,8 +4,15 @@ class BinarySearchTree:
     self.left = None
     self.right = None
 
+  def depth_first_traversal(self, node, cb):
+    if not node:
+      return
+    cb(node.value)
+    self.depth_first_traversal(node.left, cb)
+    self.depth_first_traversal(node.right, cb)
+
   def depth_first_for_each(self, cb):
-    pass    
+    self.depth_first_traversal(self, cb)
 
   def breadth_first_for_each(self, cb):
     curr_level = [self]
