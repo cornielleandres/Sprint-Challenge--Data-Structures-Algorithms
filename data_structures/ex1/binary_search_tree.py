@@ -8,7 +8,17 @@ class BinarySearchTree:
     pass    
 
   def breadth_first_for_each(self, cb):
-    pass
+    curr_level = [self]
+    while curr_level:
+      next_level = list()
+      for node in curr_level:
+        cb(node.value)
+        if node.left:
+          next_level.append(node.left)
+        if node.right:
+          next_level.append(node.right)
+      curr_level = next_level
+
 
   def insert(self, value):
     new_tree = BinarySearchTree(value)
