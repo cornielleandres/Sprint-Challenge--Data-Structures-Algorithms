@@ -1,6 +1,6 @@
 # Analysis of Algorithms - Answers
 **Exercise I**:
-*	a) `O(n^3)`: This is because the while loop will only stop after `a` has reached the value of `n^3`. That is to say, `n^3` iterations will be made.
+*	a) `O(n)`: This is because the while loop by itself iterates through until `n^3`, but inside the loop, you are augmenting `a` by `n*n` with every loop. So you are trying to reach `n^3` by taking `n^2` steps, which is effectively the same as the loop running through `n` iterations while taking single steps.
 
 *	b) `O(n^3)`: The outer-most loop(i-loop) will run through `n` times (we are at `O(n)` here). The next loop(j-loop) is nested inside, and will run through _on average_ `n/2` times for every iteration made in the previous i-loop (we are at `O(n * n/2) = O((n^2)/2) => O(n^2)` here). For the next nested loop(k-loop), its the same thing as for the j-loop; it wil on average iterate `n/2` times for every j-loop iteration (we are at `O(n^2 * n/2) = O((n^3)/2) => O(n^3)` here). For the last loop(l-loop), the value of k does not matter; it is effectively the same as `for (l = 1; l < 10; l++)`, which means it will make 9 iterations for every iteration made in the previous loop (we are finally at `O(n^3 * 9) = O(9n^3) => O(n^3)` here).
 
