@@ -4,13 +4,13 @@ Add your answers to the questions below.
 	*	`O(n)`
 
 2. What is the space complexity of your `depth_first_for_each` function?
-	*	`O(n)`
+	*	`O(n)` - worst case scenario
 
 3. What is the runtime complexity of your `breadth_first_for_each` method?
 	*	`O(n)`
 
 4. What is the space complexity of your `breadth_first_for_each` method?
-	*	`O(n)`
+	*	`O(n)` - worst case scenario
 
 5. What is the runtime complexity of your `heapsort` function?
 	*	`O(nlog(n))`
