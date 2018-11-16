@@ -7,4 +7,4 @@
 *	c) `O(n)`: Here, it will return a chain of 2's added up until `bunnies` reaches 0: `2 + 2 + 2 + ... + 0`. Since it will recursively call itself once for every bunny, the number of iterations will scale linearly with the number of bunnies.
 
 **Exercise II**:
-*	This can be done in `O(log(n))` time. You can achieve this by dropping an egg from half the height (starting at n/2). If the egg breaks, you know that `f >= n/2`; if it does not break, `f < n/2`. You can repeat this, every time halving the height, and get to the value of `f` on average in `O(log(n))` time, thus minimizing the number of dropped eggs.
+*	This can be done in `O(log(n))` time. You can achieve this by dropping an egg from half the height (starting at _n/2_). If the egg breaks, you know that `f <= n/2` and your next search will be `0 < f <= n/2`; if it does not break, `n/2 < f` and your next search will be `n/2 < f <= n`. You can repeat this search, every time halving the height, and get to the value of `f` on average in `O(log(n))` time, thus minimizing the number of dropped eggs.
